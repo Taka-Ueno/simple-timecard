@@ -1,0 +1,103 @@
+/* 全体のリセットと基本的なスタイル */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* メインコンテナ */
+.container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* タイムカードのカード部分 */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* 現在時刻表示エリア */
+.time-display-container {
+    font-size: 10vw; /* 画面幅の10%のサイズ */
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ボタンのグループ */
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+/* ボタンのスタイル */
+button {
+    padding: 15px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    width: 48%; /* ボタンの幅を調整 */
+}
+
+/* 各ボタンの色 */
+#clock-in {
+    background-color: #28a745;
+}
+
+#clock-out {
+    background-color: #dc3545;
+}
+
+#clock-in:hover {
+    background-color: #218838;
+}
+
+#clock-out:hover {
+    background-color: #c82333;
+}
+
+/* 記録表示エリア */
+.record-display {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.record-display h2 {
+    font-size: 1.2em;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.record-display p {
+    margin: 5px 0;
+}
+
+/* スマホでのボタン縦並び */
+@media (max-width: 600px) {
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
